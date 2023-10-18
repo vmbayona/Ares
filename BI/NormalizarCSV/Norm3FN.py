@@ -57,11 +57,11 @@ def main():
     university_df = create_university_table(data)
 
     # Rutas para los archivos de las tablas individuales
-    personal_csv_path = output_base_path + "PersonalData.csv"
-    language_csv_path = output_base_path + "Languages.csv"
-    skills_csv_path = output_base_path + "Skills.csv"
-    race_csv_path = output_base_path + "Race.csv"
-    university_csv_path = output_base_path + "University.csv"
+    personal_csv_path = "PersonalData.csv"
+    language_csv_path = "Languages.csv"
+    skills_csv_path ="Skills.csv"
+    race_csv_path =  "Race.csv"
+    university_csv_path = "University.csv"
 
     # Guardar las tablas individuales en archivos CSV
     personal_df.to_csv(personal_csv_path, index=False)
@@ -73,14 +73,6 @@ def main():
     # Guardar los datos normalizados en un archivo 3NF
     data.to_csv(output_base_path + output_file, index=False)
 
-    # Mostrar las rutas de los archivos
-    print("Archivos CSV guardados en:")
-    print("Personal Data:", personal_csv_path)
-    print("Languages:", language_csv_path)
-    print("Skills:", skills_csv_path)
-    print("Race:", race_csv_path)
-    print("University:", university_csv_path)
-    print("Datos normalizados en 3NF:", output_base_path + output_file)
 
 if __name__ == "__main__":
     main()
