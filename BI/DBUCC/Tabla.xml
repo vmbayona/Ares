@@ -1,0 +1,119 @@
+Table Facultades {
+  ID_Facultad int [primary key]
+  Nombre_Facultad varchar
+  Fundacion date
+  Ubicacion varchar
+  Contacto varchar
+  Telefono varchar
+  Email varchar
+}
+
+Table Programas {
+  ID_Programa int [primary key]
+  Nombre_Programa varchar
+  ID_Facultad int [ref: > Facultades.ID_Facultad]
+  Duracion int
+  Modalidad varchar
+  Acreditacion varchar
+  Fecha_Inicio_Acreditacion date
+  Coordinador_Programa varchar
+  Total_Estudiantes int
+  Total_Docentes int
+}
+
+Table LineasInvestigacion {
+  ID_Linea_Investigacion int [primary key]
+  Nombre_Linea_Investigacion varchar
+  ID_Programa int [ref: > Programas.ID_Programa]
+}
+
+Table Docentes {
+  ID_Docente int [primary key]
+  Nombre_Docente varchar
+  ID_Programa int [ref: > Programas.ID_Programa]
+  Nivel_Estudios varchar
+  Identificacion int
+  Fecha_Ingreso date
+  Email varchar
+  Telefono varchar
+}
+
+Table Estudiantes {
+  ID_Estudiante int [primary key]
+  Nombre_Estudiante varchar
+  ID_Programa int [ref: > Programas.ID_Programa]
+  Nivel_Estudios varchar
+  Identificacion int
+  Fecha_Ingreso date
+  Email varchar
+  Telefono varchar
+  Direccion varchar
+  Ciudad varchar
+}
+
+Table SemillerosInvestigacion {
+  ID_Semillero int [primary key]
+  Nombre_Semillero varchar
+  ID_Linea_Investigacion int [ref: > LineasInvestigacion.ID_Linea_Investigacion]
+  ID_Docente_Lider int [ref: > Docentes.ID_Docente]
+  Total_Estudiantes int
+}
+
+Table EstudiantesEnSemilleros {
+  ID_Estudiante_Semillero int [primary key]
+  ID_Estudiante int [ref: > Estudiantes.ID_Estudiante]
+  ID_Semillero int [ref: > SemillerosInvestigacion.ID_Semillero]
+}
+
+
+Table ArticulosInvestigacion {
+  ID_Articulo int [primary key]
+  Titulo varchar
+  ID_Linea_Investigacion int [ref: > LineasInvestigacion.ID_Linea_Investigacion]
+  Autores varchar
+  Fecha_Publicacion date
+  Revista varchar
+}
+
+Table TrabajosGrado {
+  ID_Trabajo_Grado int [primary key]
+  Titulo varchar
+  ID_Programa int [ref: > Programas.ID_Programa]
+  Autor int [ref: > Estudiantes.ID_Estudiante]
+  Fecha_Defensa date
+  Modalidad varchar
+}
+
+Table ProyectosInvestigacion {
+  ID_Proyecto int [primary key]
+  Titulo varchar
+  ID_Linea_Investigacion int [ref: > LineasInvestigacion.ID_Linea_Investigacion]
+  Responsable int [ref: > Docentes.ID_Docente]
+  Fecha_Inicio date
+  Fecha_Finalizacion date
+}
+
+Table PublicacionesRevistas {
+  ID_Publicacion int [primary key]
+  Titulo varchar
+  ID_Articulo int [ref: > ArticulosInvestigacion.ID_Articulo]
+  Revista varchar
+  Fecha_Publicacion date
+}
+
+Table Tesis {
+  ID_Tesis int [primary key]
+  Titulo varchar
+  ID_Programa int [ref: > Programas.ID_Programa]
+  Autor int [ref: > Estudiantes.ID_Estudiante]
+  Fecha_Defensa date
+}
+
+Table Conferencias {
+  ID_Conferencia int [primary key]
+  Nombre_Conferencia varchar
+  Fecha_Conferencia date
+  ID_Linea_Investigacion int [ref: > LineasInvestigacion.ID_Linea_Investigacion]
+  ID_Facultad int [ref: > Facultades.ID_Facultad]
+  ID_Programa int [ref: > Programas.ID_Programa]
+}
