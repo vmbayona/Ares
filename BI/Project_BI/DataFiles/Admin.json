@@ -1,0 +1,16 @@
+[
+    {
+      "Email": "ethan.rogers@example.com",
+      "Celular": "+57 311 2696370",
+      "AdministradorID": 400,
+      "Nombre": "Ethan",
+      "Apellido": "Rogers"
+    },
+    {
+      "Email": "bobby.parker@example.com",
+      "Celular": "+57 315 4350050",
+      "AdministradorID": 401,
+      "Nombre": "Bobby",
+      "Apellido": "Parker"
+    }
+  ]
