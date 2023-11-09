@@ -13,5 +13,7 @@ FROM
 JOIN 
     Person.Person AS P
 ON 
-    SP.BusinessEntityID = P.BusinessEntityID;
+    SP.BusinessEntityID = P.BusinessEntityID
+ORDER BY 
+    VendedorID ASC;
 
