@@ -29,7 +29,7 @@
   {
     "Email": "peter.anderson@example.com",
     "Celular": "3153790764",
-    "TipoProducto": "Limpiador de Tapicería",
+    "TipoProducto": "Limpiador de Tapiceria",
     "ProveedorID": 203,
     "Nombre": "Peter",
     "Apellido": "Anderson",
@@ -47,7 +47,7 @@
   {
     "Email": "douglas.morgan@example.com",
     "Celular": "3117530949",
-    "TipoProducto": "Limpiador de vidrios",
+    "TipoProducto": "Gel",
     "ProveedorID": 205,
     "Nombre": "Douglas",
     "Apellido": "Morgan",
@@ -74,7 +74,7 @@
   {
     "Email": "dylan.green@example.com",
     "Celular": "3153674226",
-    "TipoProducto": "Limpiador de Tapicería",
+    "TipoProducto": "Desengrasante",
     "ProveedorID": 208,
     "Nombre": "Dylan",
     "Apellido": "Green",
@@ -83,7 +83,7 @@
   {
     "Email": "logan.rivera@example.com",
     "Celular": "3119890781",
-    "TipoProducto": "Limpiador de vidrios",
+    "TipoProducto": "Limpiador de interiores",
     "ProveedorID": 209,
     "Nombre": "Logan",
     "Apellido": "Rivera",
@@ -92,7 +92,7 @@
   {
     "Email": "juan.diaz@example.com",
     "Celular": "3213212597",
-    "TipoProducto": "Acondicionador",
+    "TipoProducto": "Eliminador de olores",
     "ProveedorID": 210,
     "Nombre": "Juan",
     "Apellido": "Diaz",
